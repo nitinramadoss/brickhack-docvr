@@ -1,0 +1,15 @@
+I210220 17:10:36.793242 88 util/log/sync_buffer.go:195 ⋮ [config] file created at: 2021/02/20 17:10:36
+I210220 17:10:36.793250 88 util/log/sync_buffer.go:195 ⋮ [config] running on machine: ‹DESKTOP-1S7D2TD›
+I210220 17:10:36.793256 88 util/log/sync_buffer.go:195 ⋮ [config] binary: CockroachDB CCL v20.2.5 (x86_64-w64-mingw32, built 2021/02/16 13:03:41, go1.13.14)
+I210220 17:10:36.793259 88 util/log/sync_buffer.go:195 ⋮ [config] arguments: ‹[C:\Program Files\cockroach-v20.2.5.windows-6.2-amd64\cockroach.exe start --insecure --store=node1 --listen-addr=localhost:26257 --http-addr=localhost:8080 --join=localhost:26257,localhost:26258,localhost:26259]›
+I210220 17:10:36.793266 88 util/log/sync_buffer.go:195 ⋮ [config] line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
+I210220 17:10:36.789989 88 vendor/github.com/cockroachdb/pebble/version_set.go:142 ⋮ [n?] [JOB 1] MANIFEST created 000001
+I210220 17:10:36.797182 88 vendor/github.com/cockroachdb/pebble/open.go:295 ⋮ [n?] [JOB 1] WAL created 000002
+I210220 17:10:36.872162 115 vendor/github.com/cockroachdb/pebble/table_stats.go:118 ⋮ [n?] [JOB 2] all initial table stats loaded
+I210220 17:10:37.006409 88 vendor/github.com/cockroachdb/pebble/version_set.go:142 ⋮ [n?] [JOB 1] MANIFEST created 000001
+I210220 17:10:37.006780 88 vendor/github.com/cockroachdb/pebble/open.go:295 ⋮ [n?] [JOB 1] WAL created 000002
+I210220 17:10:37.053698 195 vendor/github.com/cockroachdb/pebble/table_stats.go:118 ⋮ [n?] [JOB 2] all initial table stats loaded
+I210220 17:12:20.309885 614 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 3] WAL created 000004
+I210220 17:12:30.364976 683 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 4] WAL created 000005
+I210220 17:13:00.368573 624 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 5] WAL created 000006
+I210220 17:14:10.348506 718 vendor/github.com/cockroachdb/pebble/db.go:1366 ⋮ [n1] [JOB 6] WAL created 000007
