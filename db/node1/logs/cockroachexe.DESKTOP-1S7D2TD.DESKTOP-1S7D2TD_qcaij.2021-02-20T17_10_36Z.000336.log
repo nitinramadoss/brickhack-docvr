@@ -1,0 +1,237 @@
+I210220 17:10:36.666771 1 util/log/sync_buffer.go:195 ⋮ [config] file created at: 2021/02/20 17:10:36
+I210220 17:10:36.666780 1 util/log/sync_buffer.go:195 ⋮ [config] running on machine: ‹DESKTOP-1S7D2TD›
+I210220 17:10:36.666787 1 util/log/sync_buffer.go:195 ⋮ [config] binary: CockroachDB CCL v20.2.5 (x86_64-w64-mingw32, built 2021/02/16 13:03:41, go1.13.14)
+I210220 17:10:36.666792 1 util/log/sync_buffer.go:195 ⋮ [config] arguments: ‹[C:\Program Files\cockroach-v20.2.5.windows-6.2-amd64\cockroach.exe start --insecure --store=node1 --listen-addr=localhost:26257 --http-addr=localhost:8080 --join=localhost:26257,localhost:26258,localhost:26259]›
+I210220 17:10:36.666803 1 util/log/sync_buffer.go:195 ⋮ [config] line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
+W210220 17:10:36.666504 1 cli/start.go:1143 ⋮ ALL SECURITY CONTROLS HAVE BEEN DISABLED!
+
+This mode is intended for non-production testing only.
+
+In this mode:
+- Your cluster is open to any client that can access ‹localhost›.
+- Intruders with access to your machine or network can observe client-server traffic.
+- Intruders can log in without password and read or write any data in the cluster.
+- Intruders can consume all your server's resources and cause unavailability.
+I210220 17:10:36.667685 1 cli/start.go:1153 ⋮ To start a secure server without mandating TLS for clients,
+consider --accept-sql-without-tls instead. For other options, see:
+
+- ‹https://go.crdb.dev/issue-v/53404/v20.2›
+- https://www.cockroachlabs.com/docs/v20.2/secure-a-cluster.html
+W210220 17:10:36.667722 1 cli/start.go:987 ⋮ ‹Using the default setting for --cache (128 MiB).›
+‹  A significantly larger value is usually needed for good performance.›
+‹  If you have a dedicated server a reasonable setting is --cache=.25 (4.0 GiB).›
+I210220 17:10:36.667737 1 cli/start.go:1168 ⋮ ‹CockroachDB CCL v20.2.5 (x86_64-w64-mingw32, built 2021/02/16 13:03:41, go1.13.14)›
+I210220 17:10:36.671030 1 server/config.go:428 ⋮ system total memory: ‹16 GiB›
+I210220 17:10:36.671046 1 server/config.go:430 ⋮ server configuration:
+‹max offset             500000000›
+‹cache size             128 MiB›
+‹SQL memory pool size   4.0 GiB›
+‹scan interval          10m0s›
+‹scan min idle time     10ms›
+‹scan max idle time     1s›
+‹event log enabled      true›
+I210220 17:10:36.671128 1 cli/start.go:972 ⋮ process identity: ‹uid S-1-5-21-1239328945-3236423555-1914466007-1002, gid S-1-5-21-1239328945-3236423555-1914466007-1002›
+I210220 17:10:36.673204 1 cli/start.go:511 ⋮ GEOS loaded from directory ‹C:\Program Files\cockroach-v20.2.5.windows-6.2-amd64\lib›
+I210220 17:10:36.673221 1 cli/start.go:516 ⋮ starting cockroach node
+E210220 17:10:36.685002 88 server/status/runtime.go:329 ⋮ [n?] could not get initial disk IO counters: Incorrect function.
+I210220 17:10:36.937568 88 server/server.go:790 ⋮ [n?] monitoring forward clock jumps based on server.clock.forward_jump_check_enabled
+I210220 17:10:37.053038 88 server/config.go:619 ⋮ [n?] 1 storage engine‹› initialized
+I210220 17:10:37.053365 88 server/config.go:622 ⋮ [n?] ‹Pebble cache size: 128 MiB›
+I210220 17:10:37.053373 88 server/config.go:622 ⋮ [n?] ‹store 0: RocksDB, max size 0 B, max open file limit 10000›
+I210220 17:10:37.111607 88 util/log/log.go:50 ⋮ initial startup completed
+Node will now attempt to join a running cluster, or wait for `cockroach init`.
+Client connections will be accepted after this completes successfully.
+Check the log file(s) for progress. 
+I210220 17:10:37.111645 88 server/init.go:208 ⋮ [n?] no stores bootstrapped
+I210220 17:10:37.111895 88 server/init.go:209 ⋮ [n?] awaiting `cockroach init` or join with an already initialized node
+W210220 17:10:39.459694 207 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it.". Reconnecting...›
+W210220 17:10:39.461907 205 server/init.go:436 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:10:41.802870 217 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26259  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it.". Reconnecting...›
+W210220 17:10:41.802930 205 server/init.go:436 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:10:45.153774 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:10:47.494958 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:10:49.840950 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:10:52.189763 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:10:54.528645 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:10:56.861656 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:10:59.205564 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:01.545673 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:03.890754 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:06.237678 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:07.123770 278 cli/start.go:497 ⋮ The server appears to be unable to contact the other nodes in the cluster. Please try:
+
+- starting the other nodes, if you haven't already;
+- double-checking that the '--join' and '--listen'/'--advertise' flags are set up correctly;
+- running the 'cockroach init' command if you are trying to initialize a new cluster.
+
+If problems persist, please see ‹https://www.cockroachlabs.com/docs/v20.2/cluster-setup-troubleshooting.html›.
+W210220 17:11:08.592652 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:10.934755 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:13.283940 303 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it.". Reconnecting...›
+W210220 17:11:13.284055 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:15.624819 331 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26259  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it.". Reconnecting...›
+W210220 17:11:15.624879 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:17.966893 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:20.312885 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:22.657014 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:25.000913 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:27.342903 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:29.685882 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:32.026821 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:34.372958 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:36.715931 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:39.055868 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:41.406869 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:43.750400 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:46.092259 449 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it.". Reconnecting...›
+W210220 17:11:46.092323 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:48.433436 385 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26259  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it.". Reconnecting...›
+W210220 17:11:48.433537 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:50.778345 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:53.119270 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:55.452045 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:11:57.787550 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:00.129483 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:02.471528 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:04.813624 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:07.155499 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:09.503425 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:11.848536 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:14.198612 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:16.543516 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:18.887433 543 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it.". Reconnecting...›
+W210220 17:12:18.887495 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: connectex: No connection could be made because the target machine actively refused it."›
+W210220 17:12:20.013353 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26259› unsuccessful: ‹rpc error: code = Canceled desc = context canceled›
+W210220 17:12:20.013424 205 server/init.go:474 ⋮ [n?] outgoing join rpc to ‹localhost:26258› unsuccessful: ‹context canceled›
+W210220 17:12:20.013456 553 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp: operation was canceled". Reconnecting...›
+W210220 17:12:20.013525 579 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26259  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26259: operation was canceled". Reconnecting...›
+I210220 17:12:20.013443 88 server/init.go:266 ⋮ [n?] cluster ‹6ba1fb65-3584-4cf4-b542-7dbf0cf0272e› has been created
+I210220 17:12:20.014073 88 server/init.go:267 ⋮ [n?] allocated node ID: n1 (for self)
+W210220 17:12:20.014559 88 gossip/gossip.go:1494 ⋮ [n?] no incoming or outgoing connections
+I210220 17:12:20.014153 554 server/server.go:1424 ⋮ [n?] connecting to gossip network to verify cluster ID ‹"6ba1fb65-3584-4cf4-b542-7dbf0cf0272e"›
+I210220 17:12:20.015438 88 gossip/gossip.go:403 ⋮ [n1] NodeDescriptor set to ‹node_id:1 address:<network_field:"tcp" address_field:"localhost:26257" > attrs:<> locality:<> ServerVersion:<major_val:20 minor_val:2 patch:0 unstable:0 > build_tag:"v20.2.5" started_at:1613841140015120600 cluster_name:"" sql_address:<network_field:"tcp" address_field:"localhost:26257" >›
+I210220 17:12:20.048959 554 server/server.go:1427 ⋮ [n1] node connected via gossip
+I210220 17:12:20.050063 88 server/node.go:430 ⋮ [n1] initialized store [n1,s1]: disk (capacity=932 GiB, available=888 GiB, used=62 KiB, logicalBytes=19 KiB), ranges=35, leases=0, queries=0.00, writes=0.00, bytesPerReplica={p10=0.00 p25=0.00 p50=0.00 p75=0.00 p90=166.00 pMax=16616.00}, writesPerReplica={p10=0.00 p25=0.00 p50=0.00 p75=0.00 p90=0.00 pMax=0.00}
+I210220 17:12:20.052870 88 kv/kvserver/stores.go:236 ⋮ [n1] read 0 node addresses from persistent storage
+W210220 17:12:20.055860 747 kv/kvserver/store.go:1691 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] could not gossip system config: ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+(1) ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+Error types: (1) *roachpb.NotLeaseHolderError
+I210220 17:12:20.071566 88 server/node.go:489 ⋮ [n1] started with engine type ‹2›
+I210220 17:12:20.071592 88 server/node.go:491 ⋮ [n1] started with attributes ‹[]›
+I210220 17:12:20.072810 88 server/goroutinedumper/goroutinedumper.go:120 ⋮ [n1] writing goroutine dumps to ‹D:\DESKTOP-1S7D2TD\qcaij\OneDrive - University of Florida\DESKTOP-1S7D2TD\qcaij\Desktop\db\node1\logs\goroutine_dump›
+I210220 17:12:20.073429 88 server/heapprofiler/heapprofiler.go:49 ⋮ [n1] writing go heap profiles to ‹D:\DESKTOP-1S7D2TD\qcaij\OneDrive - University of Florida\DESKTOP-1S7D2TD\qcaij\Desktop\db\node1\logs\heap_profiler› at least every 1h0m0s
+I210220 17:12:20.073899 88 server/heapprofiler/cgoprofiler.go:53 ⋮ [n1] to enable jmalloc profiling: "export MALLOC_CONF=prof:true" or "ln -s prof:true /etc/malloc.conf"
+I210220 17:12:20.074457 88 server/heapprofiler/statsprofiler.go:54 ⋮ [n1] writing memory stats to ‹D:\DESKTOP-1S7D2TD\qcaij\OneDrive - University of Florida\DESKTOP-1S7D2TD\qcaij\Desktop\db\node1\logs\heap_profiler› at last every 1h0m0s
+I210220 17:12:20.074484 88 server/server.go:1544 ⋮ [n1] starting http server at ‹127.0.0.1:8080› (use: ‹localhost:8080›)
+I210220 17:12:20.074851 88 server/server.go:1551 ⋮ [n1] starting grpc/postgres server at ‹127.0.0.1:26257›
+I210220 17:12:20.074864 88 server/server.go:1552 ⋮ [n1] advertising CockroachDB node at ‹localhost:26257›
+W210220 17:12:20.105915 747 kv/kvserver/store.go:1691 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] could not gossip system config: ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+(1) ‹[NotLeaseHolderError] r6: replica (n1,s1):1 not lease holder; lease holder unknown›
+Error types: (1) *roachpb.NotLeaseHolderError
+I210220 17:12:20.239237 88 sql/sqlliveness/slinstance/slinstance.go:252 ⋮ [n1] starting SQL liveness instance
+I210220 17:12:20.244756 923 sql/temporary_schema.go:510 ⋮ [n1] running temporary object cleanup background job
+I210220 17:12:20.250520 952 kv/kvserver/replica_rangefeed.go:608 ⋮ [n1,s1,r6/1:‹/Table/{SystemCon…-11}›] RangeFeed closed timestamp is empty
+I210220 17:12:20.310829 923 sql/temporary_schema.go:545 ⋮ [n1] found 0 temporary schemas
+I210220 17:12:20.310851 923 sql/temporary_schema.go:548 ⋮ [n1] early exiting temporary schema cleaner as no temporary schemas were found
+I210220 17:12:20.310859 923 sql/temporary_schema.go:549 ⋮ [n1] completed temporary object cleanup job
+I210220 17:12:20.310869 923 sql/temporary_schema.go:627 ⋮ [n1] temporary object cleaner next scheduled to run at 2021-02-20 17:42:20.24035 +0000 UTC
+I210220 17:12:20.394531 921 sql/sqlliveness/slstorage/slstorage.go:342 ⋮ [n1] inserted sqlliveness session ‹20239dec3fe6483c97049bb942ef3510›
+I210220 17:12:20.394537 919 sql/event_log.go:162 ⋮ [n1] Event: ‹"node_join"›, target: 1, info: ‹{Descriptor:{NodeID:1 Address:localhost:26257 Attrs: Locality: ServerVersion:20.2 BuildTag:v20.2.5 StartedAt:1613841140015120600 LocalityAddress:[] ClusterName: SQLAddress:localhost:26257} ClusterID:6ba1fb65-3584-4cf4-b542-7dbf0cf0272e StartedAt:1613841140015120600 LastUp:1613841140015120600}›
+I210220 17:12:20.394559 921 sql/sqlliveness/slinstance/slinstance.go:143 ⋮ [n1] created new SQL liveness session ‹20239dec3fe6483c97049bb942ef3510›
+I210220 17:12:20.512121 839 sql/event_log.go:162 ⋮ [n1,intExec=‹optInToDiagnosticsStatReporting›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:diagnostics.reporting.enabled Value:true User:root}›
+I210220 17:12:20.661188 592 sql/event_log.go:162 ⋮ [n1,intExec=‹set-setting›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:version Value:20.2 User:root}›
+W210220 17:12:21.021485 559 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: i/o timeout". Reconnecting...›
+I210220 17:12:21.021532 281 vendor/github.com/cockroachdb/circuitbreaker/circuitbreaker.go:322 ⋮ [n1] circuitbreaker: ‹gossip 127.0.0.1:26257->localhost:26258› tripped: ‹initial connection heartbeat failed›: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: i/o timeout"›
+I210220 17:12:21.022609 281 vendor/github.com/cockroachdb/circuitbreaker/circuitbreaker.go:447 ⋮ [n1] circuitbreaker: ‹gossip 127.0.0.1:26257->localhost:26258› event: ‹BreakerTripped›
+W210220 17:12:21.022622 281 gossip/client.go:118 ⋮ [n1] failed to start gossip client to ‹localhost:26258›: ‹initial connection heartbeat failed›: ‹rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:26258: i/o timeout"›
+I210220 17:12:21.022684 557 gossip/gossip.go:1508 ⋮ [n1] node has connected to cluster via gossip
+I210220 17:12:21.060945 557 kv/kvserver/stores.go:255 ⋮ [n1] wrote 0 node addresses to persistent storage
+I210220 17:12:21.080842 1403 sql/event_log.go:162 ⋮ [n1,intExec=‹initializeClusterSecret›] Event: ‹"set_cluster_setting"›, target: 0, info: ‹{SettingName:cluster.secret Value:8bcef624-ea4e-4666-b88e-ecc1ae436391 User:root}›
+I210220 17:12:21.327925 1491 sql/event_log.go:162 ⋮ [n1,intExec=‹create-default-db›] Event: ‹"create_database"›, target: 50, info: ‹{DatabaseName:defaultdb Statement:CREATE DATABASE IF NOT EXISTS defaultdb User:root}›
+I210220 17:12:21.456019 1538 sql/event_log.go:162 ⋮ [n1,intExec=‹create-default-db›] Event: ‹"create_database"›, target: 51, info: ‹{DatabaseName:postgres Statement:CREATE DATABASE IF NOT EXISTS postgres User:root}›
+I210220 17:12:21.786393 88 server/server_sql.go:800 ⋮ [n1] done ensuring all necessary migrations have run
+I210220 17:12:21.786428 88 server/server.go:1887 ⋮ [n1] serving sql connections
+I210220 17:12:21.786874 1617 jobs/job_scheduler.go:346 ⋮ [n1] waiting 2m0s before scheduled jobs daemon start
+I210220 17:12:21.788942 88 cli/start.go:677 ⋮ [config] clusterID: ‹6ba1fb65-3584-4cf4-b542-7dbf0cf0272e›
+I210220 17:12:21.788969 88 cli/start.go:687 ⋮ node startup completed:
+CockroachDB node starting at 2021-02-20 17:12:21.7878716 +0000 UTC (took 105.1s)
+build:               CCL v20.2.5 @ 2021/02/16 13:03:41 (go1.13.14)
+webui:               ‹http://localhost:8080›
+sql:                 ‹postgresql://root@localhost:26257?sslmode=disable›
+RPC client flags:    ‹C:\Program Files\cockroach-v20.2.5.windows-6.2-amd64\cockroach.exe <client cmd> --host=localhost:26257 --insecure›
+logs:                ‹D:\DESKTOP-1S7D2TD\qcaij\OneDrive - University of Florida\DESKTOP-1S7D2TD\qcaij\Desktop\db\node1\logs›
+temp dir:            ‹D:\DESKTOP-1S7D2TD\qcaij\OneDrive - University of Florida\DESKTOP-1S7D2TD\qcaij\Desktop\db\node1\cockroach-temp254808983›
+external I/O path:   ‹D:\DESKTOP-1S7D2TD\qcaij\OneDrive - University of Florida\DESKTOP-1S7D2TD\qcaij\Desktop\db\node1\extern›
+store[0]:            ‹path=D:\DESKTOP-1S7D2TD\qcaij\OneDrive - University of Florida\DESKTOP-1S7D2TD\qcaij\Desktop\db\node1›
+storage engine:      pebble
+status:              initialized new cluster
+clusterID:           ‹6ba1fb65-3584-4cf4-b542-7dbf0cf0272e›
+nodeID:              1
+I210220 17:12:21.791441 1714 server/server_update.go:55 ⋮ [n1] no need to upgrade, cluster already at the newest version
+W210220 17:12:22.022828 559 vendor/google.golang.org/grpc/internal/channelz/logging.go:73 ⋮ ‹grpc: addrConn.createTransport failed to connect to {localhost:26258  <nil> 0 <nil>}. Err: connection error: desc = "transport: Error while dialing cannot reuse client connection". Reconnecting...›
+W210220 17:12:30.076364 787 server/status/runtime.go:452 ⋮ [n1] unable to get file descriptor usage (will not try again): ‹not implemented on windows›
+W210220 17:12:30.076800 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:12:30.086995 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 104 MiB RSS, 296 goroutines, 23 MiB/7.5 MiB/49 MiB GO alloc/idle/total, 1019 KiB/1.7 MiB CGO alloc/total, 0.0 CGO/sec, 0.0/0.0 %(u/s)time, 0.0 %gc (8x), 164 KiB/97 KiB (r/w)net
+I210220 17:12:38.154071 2088 kv/kvserver/replica_consistency.go:257 ⋮ [n1,consistencyChecker,s1,r4/1:‹/System{/tsd-tse}›] triggering stats recomputation to resolve delta of {ContainsEstimates:3164 LastUpdateNanos:1613841150313672900 IntentAge:0 GCBytesAge:0 LiveBytes:-14202 LiveCount:-794 KeyBytes:-40182 KeyCount:-794 ValBytes:25980 ValCount:-794 IntentBytes:0 IntentCount:0 SysBytes:0 SysCount:0 AbortSpanBytes:0}
+I210220 17:12:40.074771 46 kv/kvserver/store.go:2625 ⋮ [n1,s1] sstables (read amplification = 0):
+‹›
+I210220 17:12:40.075007 46 kv/kvserver/store.go:2626 ⋮ [n1,s1] ‹›
+‹__level_____count____size___score______in__ingest(sz_cnt)____move(sz_cnt)___write(sz_cnt)____read___r-amp___w-amp›
+‹    WAL         3   618 K       -   613 K       -       -       -       -   618 K       -       -       -     1.0›
+‹      0         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      1         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      2         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      3         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      4         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      5         0     0 B    0.00     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹      6         0     0 B       -     0 B     0 B       0     0 B       0     0 B       0     0 B       0     0.0›
+‹  total         0     0 B       -   618 K     0 B       0     0 B       0   618 K       0     0 B       0     1.0›
+‹  flush         0›
+‹compact         0     0 B          (size == estimated-debt)›
+‹ memtbl         3   1.8 M›
+‹zmemtbl         0     0 B›
+‹   ztbl         0     0 B›
+‹ bcache         0     0 B    0.0%  (score == hit-rate)›
+‹ tcache         0     0 B    0.0%  (score == hit-rate)›
+‹ titers         0›
+‹ filter         -       -    0.0%  (score == utility)›
+W210220 17:12:40.076576 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:12:40.087563 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 157 MiB RSS, 299 goroutines, 39 MiB/64 MiB/111 MiB GO alloc/idle/total, 1019 KiB/1.7 MiB CGO alloc/total, 1644.5 CGO/sec, 1.7/1.2 %(u/s)time, 0.0 %gc (4x), 16 KiB/13 KiB (r/w)net
+W210220 17:12:50.077678 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:12:50.087476 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 176 MiB RSS, 303 goroutines, 78 MiB/34 MiB/118 MiB GO alloc/idle/total, 1019 KiB/1.7 MiB CGO alloc/total, 434.7 CGO/sec, 1.4/1.3 %(u/s)time, 0.0 %gc (1x), 155 KiB/4.3 MiB (r/w)net
+W210220 17:13:00.078493 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:13:00.088401 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 151 MiB RSS, 301 goroutines, 26 MiB/84 MiB/89 MiB GO alloc/idle/total, 1019 KiB/1.7 MiB CGO alloc/total, 322.1 CGO/sec, 0.1/0.3 %(u/s)time, 0.0 %gc (1x), 4.5 KiB/2.6 KiB (r/w)net
+W210220 17:13:10.079544 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:13:10.089494 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 132 MiB RSS, 301 goroutines, 34 MiB/78 MiB/67 MiB GO alloc/idle/total, 1019 KiB/1.7 MiB CGO alloc/total, 238.0 CGO/sec, 0.3/0.3 %(u/s)time, 0.0 %gc (0x), 12 KiB/7.1 KiB (r/w)net
+I210220 17:13:20.074894 47 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+gossip connectivity
+  n1 [sentinel];
+W210220 17:13:20.079966 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:13:20.089638 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 133 MiB RSS, 303 goroutines, 41 MiB/72 MiB/67 MiB GO alloc/idle/total, 1019 KiB/1.7 MiB CGO alloc/total, 253.2 CGO/sec, 0.5/0.3 %(u/s)time, 0.0 %gc (0x), 14 KiB/8.6 KiB (r/w)net
+W210220 17:13:30.079596 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:13:30.089254 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 133 MiB RSS, 300 goroutines, 30 MiB/81 MiB/67 MiB GO alloc/idle/total, 1019 KiB/1.7 MiB CGO alloc/total, 330.7 CGO/sec, 0.3/0.2 %(u/s)time, 0.0 %gc (1x), 278 KiB/54 KiB (r/w)net
+W210220 17:13:40.079871 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:13:40.091581 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 133 MiB RSS, 300 goroutines, 38 MiB/74 MiB/67 MiB GO alloc/idle/total, 1020 KiB/1.7 MiB CGO alloc/total, 208.2 CGO/sec, 0.3/0.0 %(u/s)time, 0.0 %gc (0x), 596 KiB/132 KiB (r/w)net
+W210220 17:13:50.080635 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:13:50.091328 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 134 MiB RSS, 297 goroutines, 25 MiB/85 MiB/67 MiB GO alloc/idle/total, 1020 KiB/1.7 MiB CGO alloc/total, 232.2 CGO/sec, 0.2/0.3 %(u/s)time, 0.0 %gc (1x), 589 KiB/159 KiB (r/w)net
+W210220 17:14:00.082644 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:14:00.092822 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 134 MiB RSS, 298 goroutines, 34 MiB/78 MiB/67 MiB GO alloc/idle/total, 1020 KiB/1.7 MiB CGO alloc/total, 235.4 CGO/sec, 0.0/0.1 %(u/s)time, 0.0 %gc (0x), 19 MiB/216 KiB (r/w)net
+W210220 17:14:10.083581 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:14:10.093101 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 134 MiB RSS, 298 goroutines, 41 MiB/72 MiB/67 MiB GO alloc/idle/total, 1020 KiB/1.7 MiB CGO alloc/total, 221.7 CGO/sec, 0.2/0.0 %(u/s)time, 0.0 %gc (0x), 15 MiB/157 KiB (r/w)net
+I210220 17:14:20.075695 47 gossip/gossip.go:568 ⋮ [n1] gossip status (ok, 1 node‹›)
+gossip client (0/3 cur/max conns)
+gossip server (0/3 cur/max conns, infos 0/0 sent/received, bytes 0B/0B sent/received)
+W210220 17:14:20.083784 787 server/status/runtime.go:462 ⋮ [n1] problem fetching disk stats: Incorrect function.; disk stats will be empty.
+I210220 17:14:20.093381 787 server/status/runtime.go:525 ⋮ [n1] runtime stats: 135 MiB RSS, 298 goroutines, 29 MiB/81 MiB/67 MiB GO alloc/idle/total, 1020 KiB/1.7 MiB CGO alloc/total, 237.3 CGO/sec, 0.2/0.2 %(u/s)time, 0.0 %gc (1x), 32 KiB/20 KiB (r/w)net
+I210220 17:14:26.424919 1 cli/start.go:736 ⋮ received signal 'interrupt'
+I210220 17:14:26.425399 1 cli/start.go:821 ⋮ initiating graceful shutdown of server
+I210220 17:14:26.505582 3615 server/drain.go:174 ⋮ [server drain process] drain remaining: 2
+I210220 17:14:26.505613 3615 server/drain.go:176 ⋮ [server drain process] drain details: descriptor leases: 1, liveness record: 1
+I210220 17:14:26.763548 3615 server/drain.go:174 ⋮ [server drain process] drain remaining: 0
+I210220 17:14:26.763588 3615 util/stop/stopper.go:563 ⋮ [server drain process] quiescing
+W210220 17:14:26.763620 921 sql/sqlliveness/slinstance/slinstance.go:182 ⋮ [n1] exiting heartbeat loop
+W210220 17:14:26.763653 932 jobs/registry.go:672 ⋮ canceling all adopted jobs due to stopper quiescing
+I210220 17:14:26.805623 1 cli/start.go:873 ⋮ server drained and shutdown completed
+E210220 17:14:26.807574 1 cli/error.go:398 ⋮ ‹ERROR: interrupted›

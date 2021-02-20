@@ -1,0 +1,24 @@
+I210220 17:07:31.663621 1 util/log/sync_buffer.go:195 ⋮ [config] file created at: 2021/02/20 17:07:31
+I210220 17:07:31.663627 1 util/log/sync_buffer.go:195 ⋮ [config] running on machine: ‹DESKTOP-1S7D2TD›
+I210220 17:07:31.663631 1 util/log/sync_buffer.go:195 ⋮ [config] binary: CockroachDB CCL v20.2.5 (x86_64-w64-mingw32, built 2021/02/16 13:03:41, go1.13.14)
+I210220 17:07:31.663634 1 util/log/sync_buffer.go:195 ⋮ [config] arguments: ‹[C:\Program Files\cockroach-v20.2.5.windows-6.2-amd64\cockroach.exe start --certs-dir=certs --store=node1 --listen-addr=localhost:26257 --http-addr=localhost:8080 --join=localhost:26257,localhost:26258,localhost:26259]›
+I210220 17:07:31.663641 1 util/log/sync_buffer.go:195 ⋮ [config] line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
+W210220 17:07:31.663477 1 cli/start.go:987 ⋮ ‹Using the default setting for --cache (128 MiB).›
+‹  A significantly larger value is usually needed for good performance.›
+‹  If you have a dedicated server a reasonable setting is --cache=.25 (4.0 GiB).›
+I210220 17:07:31.664723 1 cli/start.go:1168 ⋮ ‹CockroachDB CCL v20.2.5 (x86_64-w64-mingw32, built 2021/02/16 13:03:41, go1.13.14)›
+I210220 17:07:31.667331 1 server/config.go:428 ⋮ system total memory: ‹16 GiB›
+I210220 17:07:31.667344 1 server/config.go:430 ⋮ server configuration:
+‹max offset             500000000›
+‹cache size             128 MiB›
+‹SQL memory pool size   4.0 GiB›
+‹scan interval          10m0s›
+‹scan min idle time     10ms›
+‹scan max idle time     1s›
+‹event log enabled      true›
+I210220 17:07:31.667424 1 cli/start.go:972 ⋮ process identity: ‹uid S-1-5-21-1239328945-3236423555-1914466007-1002, gid S-1-5-21-1239328945-3236423555-1914466007-1002›
+I210220 17:07:31.760548 1 cli/start.go:511 ⋮ GEOS loaded from directory ‹C:\Program Files\cockroach-v20.2.5.windows-6.2-amd64\lib›
+I210220 17:07:31.760586 1 cli/start.go:516 ⋮ starting cockroach node
+E210220 17:07:31.765904 1 cli/error.go:398 ⋮ ‹ERROR: cannot load certificates.›
+‹Check your certificate settings, set --certs-dir, or use --insecure for insecure clusters.›
+‹failed to start server: problem with node certificate: not found›
